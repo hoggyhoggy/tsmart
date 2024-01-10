@@ -51,7 +51,7 @@ class TSmart:
         for i in range(tries):
             message = struct.pack("=BBBB", 0x01, 0, 0, 0x01 ^ 0x55)
 
-            await stream.send(message, ("255.255.255.255", UDP_PORT))
+            await stream.send(message, ("192.168.2.119", UDP_PORT))
 
             _LOGGER.info("Discovery message sent")
 
